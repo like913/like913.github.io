@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm -r ~/.wine32
+rm -r ~/.wine
+
+winecfg
+setup_d9vk install
+setup_dxvk install
+
+WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg
+WINEARCH=win32 WINEPREFIX=~/.wine32 setup_d9vk install
+WINEARCH=win32 WINEPREFIX=~/.wine32 setup_dxvk install
