@@ -1,8 +1,8 @@
 #!/bin/bash
 
-pacman -Sy sed reflector
+pacman -Sy sed reflector --noconfirm 
 
-# Руссификация консоли
+echo "Russification..."
 loadkeys ru
 setfont cyr-sun16
 
@@ -12,10 +12,11 @@ locale-gen
 
 export LANG=ru_RU.UTF-8
 
+echo "Синхронизация времени"
 timedatectl set-ntp true
 timedatectl status
 
-# Разбивка диска
+echo "Форматирование диска"
 fdisk -l
 #cfdisk -z /dev/sda
 
@@ -41,15 +42,17 @@ mount /dev/sda4 /mnt/home
 #mkdir -p /mnt/mnt/public
 #mount /dev/sda6 /mnt/mnt/public
 
-# Настройка Зеркал
-reflector --country Russia --country Kazakhstan --age 6 --sort rate --save /etc/pacman.d/mirrorlist
+echo "Настройка Зеркал"
+reflector --country Russia --country Kazakhstan --age 12 --sort rate --save /etc/pacman.d/mirrorlist
 
-# Установка Arch
+echo "Установка Arch"
 pacstrap -i /mnt base base-devel
 
+echo "Hacтройка точек монтирования"
 genfstab -L -p -P /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt
+echo "Установка"
+arch-chroot /mnt sh install.sh
 
 umount -R /mnt
 reboot

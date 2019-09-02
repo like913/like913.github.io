@@ -2,7 +2,7 @@
 
 sudo pacman -Syu
 
-# Установка pacaur
+echo "Установка pacaur"
 pacman -S git
 mkdir -p /tmp/pacaur_install
 cd /tmp/pacaur_install
@@ -16,6 +16,15 @@ makepkg -si
 cd ../..
 rm -rf pacaur_install
 
+echo "Установка микрокода ядра"
 pacaur -S aic94xx-firmware wd719x-firmware
 
 sudo mkinitcpio -p linux
+
+echo "Установка wine"
+sudo pacman -S wine wine-mono wine_gecko winetricks --noconfirm
+pacaur -S d9vk-bin dxvk-bin
+winecfg
+setup_d9vk install
+setup_dxvk install
+sudo pacman -S vkd3d lib32-vkd3d --noconfirm
