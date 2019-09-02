@@ -1,4 +1,0 @@
-#!/bin/bash
-
-setup_d9vk install
-setup_dxvk install
