@@ -118,4 +118,4 @@ mkinitcpio -p linux
 echo "Настройка папок пользователя"
 packman -S xdg-user-dirs
 
-exit|exit
+exit
