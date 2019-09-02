@@ -42,7 +42,7 @@ mount /dev/sda4 /mnt/home
 #mount /dev/sda6 /mnt/mnt/public
 
 # Настройка Зеркал
-reflector --country Russia --country Kazakhstan --age 6 --sort rate --save mirrorlist
+reflector --country Russia --country Kazakhstan --age 6 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Установка Arch
 pacstrap -i /mnt base base-devel
