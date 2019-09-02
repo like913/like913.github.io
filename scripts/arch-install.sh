@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S sed reflector
+pacman -Sy sed reflector
 
 # Руссификация консоли
 loadkeys ru
