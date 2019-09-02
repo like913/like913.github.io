@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S sed
+pacman -S sed reflector
 
 # Руссификация консоли
 loadkeys ru
@@ -40,6 +40,9 @@ mount /dev/sda4 /mnt/home
 #mkfs.ext4 /dev/sda6 -L public
 #mkdir -p /mnt/mnt/public
 #mount /dev/sda6 /mnt/mnt/public
+
+# Настройка Зеркал
+reflector --country Russia --country Kazakhstan --age 6 --sort rate --save mirrorlist
 
 # Установка Arch
 pacstrap -i /mnt base base-devel
