@@ -41,9 +41,6 @@ mount /dev/sda4 /mnt/home
 #mkdir -p /mnt/mnt/public
 #mount /dev/sda6 /mnt/mnt/public
 
-# Настройка зеркала
-echo "Server = https://mirror.mirohost.net/archlinux/$repo/os/$arch" > /etc/pacman.d/mirrorlist
-
 # Установка Arch
 pacstrap -i /mnt base base-devel
 
