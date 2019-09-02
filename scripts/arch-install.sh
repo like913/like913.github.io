@@ -52,7 +52,7 @@ echo "Hacтройка точек монтирования"
 genfstab -L -p -P /mnt >> /mnt/etc/fstab
 
 echo "Установка"
-arch-chroot /mnt sh install.sh
+arch-chroot /mnt sh -c install.sh
 
 echo "Перезагрузка"
 umount -R /mnt
