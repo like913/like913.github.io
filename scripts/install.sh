@@ -80,25 +80,25 @@ echo "Установка драйверов"
 #echo "AMD" #Установка и настройка AMD не тестировалось
 #pacman -S xf86-video-amdgpu --noconfirm
 
-#echo "VirtualBox"
-#pacman -S virtualbox-guest-utils --noconfirm
+echo "VirtualBox"
+pacman -S virtualbox-guest-utils --noconfirm
 
 echo "Установка Display Manager" # раскомментировать блок SDDM или LXDM
 #echo "Установка sddm"
 #pacman -S sddm --noconfirm
 #systemctl enable sddm
 
-#echo "Установка lxdm"
-#pacman -S lxdm --noconfirm
-#systemctl enable lxdm
+echo "Установка lxdm"
+pacman -S lxdm --noconfirm
+systemctl enable lxdm
 
 echo "Установка настройки сети"
 pacman -S networkmanager --noconfirm
 systemctl enable NetworkManager
 
 echo "Установка Desktop Environment"
-#echo "Cinnamon"
-#pacman -S cinnamon cinnamon-translations --noconfirm
+echo "Cinnamon"
+pacman -S cinnamon cinnamon-translations --noconfirm
 
 #echo "Deepin"
 #pacman -S deepin --noconfirm
