@@ -56,4 +56,4 @@ arch-chroot /mnt sh -c "$(curl -fsSL https://like913.github.io/scripts/install.s
 
 echo "Перезагрузка"
 umount -R /mnt
-reboot
+#reboot
