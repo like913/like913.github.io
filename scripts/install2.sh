@@ -1,9 +1,9 @@
 #!/bin/bash
 
 sudo pacman -Syu
+sudo pacman -S git --noconfirm
 
 echo "Установка pacaur"
-pacman -S git
 mkdir -p /tmp/pacaur_install
 cd /tmp/pacaur_install
 git clone https://aur.archlinux.org/auracle-git.git

@@ -8,7 +8,7 @@ setfont cyr-sun16
 echo -e 'KEYMAP=ru\nFONT=cyr-sun16\n' > /etc/vconsole.conf
 
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
-sed -i 's/#ru_RU.UTF-8 UTF-8/nu_RU.UTF-8 UTF-8/g' /etc/locale.gen
+sed -i 's/#ru_RU.UTF-8 UTF-8/ru_RU.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 
 echo -e 'LANG="ru_RU.UTF-8"' > /etc/locale.conf
@@ -34,7 +34,7 @@ echo 'Пароль пользователя'
 passwd like
 
 echo 'Настройка прав администратора'
-sed -i 's/#%wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
 sed -i 's/#Color/Color/g' /etc/pacman.conf
 
 echo 'Разблокировка x32 библиотек'
@@ -99,12 +99,14 @@ systemctl enable NetworkManager
 echo 'Установка Desktop Environment'
 echo 'Cinnamon'
 pacman -S cinnamon cinnamon-translations --noconfirm
+pacman -S gnomme-terminal
 
 #echo 'Deepin'
 #pacman -S deepin --noconfirm
 
 #echo 'KDE Plasma'
 #pacman -Sy plasma-meta kdebase --noconfirm
+#pacman -S konsole
 
 #echo 'XFCE'
 #pacman -S xfce4 xfce4-goodies --noconfirm
