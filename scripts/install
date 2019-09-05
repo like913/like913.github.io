@@ -62,10 +62,10 @@ echo '>> Hacтройка точек монтирования'
 genfstab -L -p -P /mnt >> /mnt/etc/fstab
 
 echo ">> Установка"
-arch-chroot /mnt sh "$(curl -fsSL https://like913.github.io/scripts/chroot)"
+arch-chroot /mnt sh -c "$(curl -fsSL https://like913.github.io/scripts/chroot)"
 
 echo '--------------------------------------------------'
 echo '|                 Перезагрузка                   |'
 echo '--------------------------------------------------'
-umount -R /mnt
-reboot
+#umount -R /mnt
+#reboot
