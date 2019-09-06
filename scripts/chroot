@@ -6,10 +6,10 @@ hostname=$1
 # Функция установки из aur
 function aur {
 cd /tmp
-git clone https://aur.archlinux.org/$0.git
-chown -R $username:users /tmp/$0
-chown -R $username:users /tmp/$0/PKGBUILD
-cd $0
+git clone https://aur.archlinux.org/$1.git
+chown -R $username:users /tmp/$1
+chown -R $username:users /tmp/$1/PKGBUILD
+cd $1
 sudo -u $username makepkg -si --noconfirm
 cd ..
 rm -rf $
@@ -134,6 +134,7 @@ echo '--------------------------------------------------'
 #pacman -S deepin --noconfirm
 
 echo '>> KDE Plasma'
+pacman -S phonon-qt5-vlc
 pacman -Sy plasma-meta kdebase packagekit-qt5
 echo '>  Дополнительный софт для KDE'
 pacman -S konsole partitionmanager spectacle okular --noconfirm
