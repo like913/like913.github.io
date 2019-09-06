@@ -92,6 +92,7 @@ wget 'https://like913.github.io/config/10-synaptics.conf'
 
 echo '>> Установка поддержки файловых систем NTFS exFAT'
 pacman -Sy ntfs-3g exfat-utils --noconfirm
+
 echo '>> Видеокарта'
 echo 'intel'
 pacman -Sy xf86-video-intel --noconfirm
@@ -106,6 +107,7 @@ sed -i 's/MODULES=(/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm /g' /et
 ## После перезагрузки выполнить sudo nvidia-xconfig для настройки видеокары
 ## sudo nvidia-xconfig --prime необходимо для конфигурирования драйвера в совместимом режиме с картой intel
 wget 'https://like913.github.io/config/20-nvidia.conf'
+
 #echo 'AMD' #Установка и настройка AMD не тестировалось
 #pacman -Sy xf86-video-amdgpu --noconfirm
 
