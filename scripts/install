@@ -9,6 +9,8 @@ hostname="E5-576G"
 echo '--------------------------------------------------'
 echo '|              Install Arch Linux                |'
 echo '--------------------------------------------------'
+echo 'Install Arch Linux '$username'@'$hostname
+echo '--------------------------------------------------'
 pacman -Sy sed reflector --noconfirm
 
 echo '>> Russification...'
