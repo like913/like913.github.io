@@ -1,20 +1,19 @@
 #!/bin/bash
 
-username=$1
-hostname=$2
+username=$0
+hostname=$1
 
 # Функция установки из aur
 function aur {
 cd /tmp
-git clone https://aur.archlinux.org/$1.git
-chown -R $username:users /tmp/$1
-chown -R $username:users /tmp/$1/PKGBUILD
-cd $1
+git clone https://aur.archlinux.org/$0.git
+chown -R $username:users /tmp/$0
+chown -R $username:users /tmp/$0/PKGBUILD
+cd $0
 sudo -u $username makepkg -si --noconfirm
 cd ..
-rm -rf $1
+rm -rf $
 }
-
 
 echo '--------------------------------------------------'
 echo 'Install Arch Linux '$username'@'$hostname
@@ -38,8 +37,8 @@ timedatectl set-ntp true
 hwclock --systohc --utc
 timedatectl status
 
-echo '>> Имя компьютера'
-echo 'E5-576G' > /etc/hostname
+echo '>> Имя компьютера '$hostname
+echo $hostname > /etc/hostname
 echo -e '127.0.0.1 localhost\n::1 localhost\n' > /etc/hosts
 
 # Настройка администратора и создание пользователя $username
