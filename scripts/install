@@ -3,6 +3,12 @@
 echo '--------------------------------------------------'
 echo '|              Install Arch Linux                |'
 echo '--------------------------------------------------'
+username="like"
+hostname="E5-576G"
+
+echo '--------------------------------------------------'
+echo '|              Install Arch Linux                |'
+echo '--------------------------------------------------'
 pacman -Sy sed reflector --noconfirm
 
 echo '>> Russification...'

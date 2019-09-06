@@ -1,9 +1,22 @@
 #!/bin/bash
+#username="like"
+#hostname="E5-576G"
 
-username="like"
-echo 'username='$username
+# Функция установки из aur
+function aur {
+cd /tmp
+git clone https://aur.archlinux.org/$1.git
+chown -R $username:users /tmp/$1
+chown -R $username:users /tmp/$1/PKGBUILD
+cd $1
+sudo -u $username makepkg -si --noconfirm
+cd ..
+rm -rf $1
+}
+
+
 echo '--------------------------------------------------'
-echo '|              Install Arch Linux                |'
+echo 'Install Arch Linux '$username'@'$hostname
 echo '--------------------------------------------------'
 pacman -Sy sed --noconfirm
 
@@ -54,6 +67,7 @@ pacman -S grub efibootmgr --noconfirm #для mbr удалить efibootmgr
 grub-install /dev/sda
 echo '>> Настройка GRUB'
 grub-mkconfig -o /boot/grub/grub.cfg
+sed -i 's/set timeout=5/set timeout=0/g' /boot/grub/grub.cfg
 
 echo '>> Установка xorg и mesa'
 pacman -S xorg xorg-xinit mesa --noconfirm
@@ -67,6 +81,8 @@ echo '--------------------------------------------------'
 #pacman -S xf86-input-synaptics --noconfirm
 #wget 'https://like913.github.io/confug/10-synaptics.conf'
 
+echo '>> '
+pacman -S ntfs-3g exfat-utils --noconfirm
 #echo 'Видеокарта'
 #echo 'intel'
 #pacman -S xf86-video-intel --noconfirm
@@ -118,8 +134,10 @@ echo '--------------------------------------------------'
 #pacman -S deepin --noconfirm
 
 echo '>> KDE Plasma'
-pacman -Sy plasma-meta kdebase --noconfirm
-pacman -S konsole partitionmanager spectacle baobab okular --noconfirm
+pacman -Sy plasma-meta kdebase packagekit-qt5
+echo '>  Дополнительный софт для KDE'
+pacman -S konsole partitionmanager spectacle okular --noconfirm
+pacman -Rsnc konqueror kwrite ark --noconfirm
 
 echo '>> Bluetooth pulseaudio и alsa поддержка звука'
 pacman -Sy bluedevil pulseaudio-bluetooth alsa-utils pulseaudio-equalizer-ladspa --noconfirm
@@ -131,11 +149,6 @@ systemctl enable bluetooth.service
 echo '--------------------------------------------------'
 echo '|        Установка дополнительного софта         |'
 echo '--------------------------------------------------'
-echo '>> Ставим шрифты'
-pacman -S ttf-liberation ttf-dejavu --noconfirm
-
-echo '>> Собрать ядро'
-mkinitcpio -p linux
 
 echo '>> Настройка папок пользователя'
 pacman -S xdg-user-dirs --noconfirm
@@ -144,36 +157,36 @@ pacman -Syu
 pacman -S git --noconfirm
 
 echo '>> Установка pacaur'
-mkdir -p /tmp/pacaur_install
-cd /tmp/pacaur_install
-git clone https://aur.archlinux.org/auracle-git.git
-cd auracle-git
-sudo -u $username makepkg -si --noconfirm
-cd ..
-git clone https://aur.archlinux.org/pacaur.git
-cd pacaur
-sudo -u $username makepkg -si --noconfirm
-cd ../..
-rm -rf pacaur_install
+aur auracle-git
+aur pacaur
 
-echo '>> Установка микрокода ядра'
-sudo -u $username pacaur -S aic94xx-firmware wd719x-firmware
+echo '>> Установка микрокода ядра aic94xx и wd719x'
+#sudo -u $username pacaur -S aic94xx-firmware wd719x-firmware
+aur aic94xx-firmware
+aur wd719x-firmware
 
 mkinitcpio -p linux
 
+echo '>> Установка octopi'
+aur alpm_octopi_utils
+aur octopi
+
+echo '>> Установка Firewall'
+pacman -S ufw gufw --noconfirm
+systemctl enable ufw.service
+
 echo '>> Установка wine'
 pacman -S wine wine-mono wine_gecko winetricks --noconfirm
-sudo -u $username pacaur -S d9vk-bin dxvk-bin --noconfirm
+aur d9vk-bin
+aur dxvk-bin
 #winecfg
 #setup_d9vk install
 #setup_dxvk install
 pacman -S vkd3d lib32-vkd3d --noconfirm
 
-echo '>> Установка pamac'
-sudo -u $username pacaur -S pamac-aur --noconfirm
-
 echo '>> Установка firefox'
 pacman -S firefox firefox-i18n-ru --noconfirm
+pacman -S thunderbird thunderbird-i18n-ru --noconfirm
 
 echo '>> Установка VLC'
 pacman -S vlc cheese --noconfirm
@@ -181,7 +194,15 @@ pacman -S vlc cheese --noconfirm
 echo '>> Установка qbittorrent'
 pacman -S qbittorrent --noconfirm
 
-exho '>> Читалки и проспотр фото'
-pacman -S  xreader gpicview --noconfirm
+echo '>> Читалки, просмотр фото, музыки и прочее'
+pacman -S neofetch baobab audacious --noconfirm
+pacman -S gpicview --noconfirm
 
+echo '>> Ставим шрифты'
+pacman -S ttf-liberation ttf-dejavu --noconfirm
+aur ttf-ms-fonts
+aur ttf-tahoma
+
+echo '>> Отчистка диска'
+pacman -Scc --noconfirm
 exit
