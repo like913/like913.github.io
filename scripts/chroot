@@ -12,7 +12,7 @@ chown -R $username:users /tmp/$1/PKGBUILD
 cd $1
 sudo -u $username makepkg -si --noconfirm
 cd ..
-rm -rf $
+rm -rf $1
 }
 
 echo '--------------------------------------------------'
@@ -150,6 +150,8 @@ systemctl enable bluetooth.service
 echo '--------------------------------------------------'
 echo '|        Установка дополнительного софта         |'
 echo '--------------------------------------------------'
+echo 'PS1="\e[0;31m\u\e[m@\e[1;90m\h\e[m \e[1;97m\W\e[m # "' >> /root/.bashrc
+echo 'PS1="\e[0;34m\u\e[m@\e[1;90m\h\e[m \e[1;97m\W\e[m # "' >> /home/$username/.bashrc
 
 echo '>> Настройка папок пользователя'
 pacman -S xdg-user-dirs --noconfirm
