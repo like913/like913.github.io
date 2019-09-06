@@ -65,12 +65,12 @@ echo '>> Установка GRUB'
 pacman -Sy intel-ucode --noconfirm #раскомментировать строку для AMD процессора
 pacman -Sy efibootmgr --noconfirm #для mbr удалить efibootmgr
 bootctl install
-echo -e 'default arch\ntimeout 0\neditor 1\n' > /boot/loader/loader.conf
-echo -e 'title Arch Linux\n' > /boot/loader/entries/arch.conf
-echo -e 'linux /vmlinuz-linux\n' >> /boot/loader/entries/arch.conf
-echo -e 'initrd /intel-ucode.img\n' >> /boot/loader/entries/arch.conf
-echo -e 'initrd /initramfs-linux.img\n' >> /boot/loader/entries/arch.conf
-echo -e 'options root=/dev/sda3 rw\n' >> /boot/loader/entries/arch.conf
+echo -e 'default arch\ntimeout 0\neditor 1' > /boot/loader/loader.conf
+echo 'title Arch Linux' > /boot/loader/entries/arch.conf
+echo 'linux /vmlinuz-linux' >> /boot/loader/entries/arch.conf
+echo 'initrd /intel-ucode.img' >> /boot/loader/entries/arch.conf
+echo 'initrd /initramfs-linux.img' >> /boot/loader/entries/arch.conf
+echo 'options root=/dev/sda3 rw' >> /boot/loader/entries/arch.conf
 #pacman -Sy grub --noconfirm
 #grub-install /dev/sda
 #echo '>> Настройка GRUB'
@@ -83,6 +83,7 @@ pacman -Sy xorg xorg-xinit mesa --noconfirm
 echo '--------------------------------------------------'
 echo '|              Установка драйверов               |'
 echo '--------------------------------------------------'
+mkdir -p /etc/X11/xorg.conf.d
 cd /etc/X11/xorg.conf.d/
 
 echo 'Тачпад'
@@ -94,7 +95,7 @@ pacman -Sy ntfs-3g exfat-utils --noconfirm
 echo '>> Видеокарта'
 echo 'intel'
 pacman -Sy xf86-video-intel --noconfirm
-#wget 'https://like913.github.io/confug/20-intel.conf'
+#wget 'https://like913.github.io/config/20-intel.conf'
 #echo 'Настрока DRM'
 sed -i 's/MODULES=(/MODULES=(i915 /g' /etc/mkinitcpio.conf
 
@@ -104,7 +105,7 @@ echo '>> Настрока DRM nVidia'
 sed -i 's/MODULES=(/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm /g' /etc/mkinitcpio.conf
 ## После перезагрузки выполнить sudo nvidia-xconfig для настройки видеокары
 ## sudo nvidia-xconfig --prime необходимо для конфигурирования драйвера в совместимом режиме с картой intel
-
+wget 'https://like913.github.io/config/20-nvidia.conf'
 #echo 'AMD' #Установка и настройка AMD не тестировалось
 #pacman -Sy xf86-video-amdgpu --noconfirm
 
@@ -149,7 +150,7 @@ pacman -Sy konsole partitionmanager ark spectacle okular --noconfirm
 pacman -Rsnc konqueror kwrite --noconfirm
 
 echo '>> Bluetooth pulseaudio и alsa поддержка звука'
-pacman -Sy bluedevil pulseaudio-bluetooth alsa-utils pulseaudio-equalizer-ladspa --noconfirm
+pacman -Sy bluez bluez-utils bluedevil pulseaudio-bluetooth alsa-utils pulseaudio-equalizer-ladspa --noconfirm
 systemctl enable bluetooth.service
 
 #echo 'XFCE'
