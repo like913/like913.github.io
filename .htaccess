@@ -1,0 +1,11 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+
+RewriteCond %{HTTP:HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://ordanax.github.io/$1 [R=301,L]
+SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+RewriteCond %{HTTP_USER_AGENT} wget [NC]
+RewriteRule .* - [F]
+
+ErrorDocument 404 /404.html

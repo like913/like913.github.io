@@ -1,0 +1,7 @@
+
+title: like913.github.io
+description: Мои проекты
+baseurl: ''
+url: https://like913.github.io
+permalink: /:title
+markdown: kramdown
