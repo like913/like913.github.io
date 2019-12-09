@@ -1,7 +1,6 @@
 ---
 title: О сайте
-permalink: about/
-
+permalink: /about/
 layout: post
 ---
 # О сайте #
