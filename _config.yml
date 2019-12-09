@@ -1,7 +1,6 @@
 
-title: like913.github.io
+name: like913.github.io
 description: Мои проекты
-baseurl: ''
-url: https://like913.github.io
-permalink: /:title
+url: https://like913.github.io/
+permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
