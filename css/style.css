@@ -92,6 +92,12 @@ h4 {
 	color: #a0a0ff;
 	letter-spacing: .25pt;}
 
+hr {
+	border: 1px solid #101020;}
+
+hr.grey {
+	border: 1px solid #101010;}
+
 a {
 	color: #a0a0ff;
 	text-decoration: none;}
