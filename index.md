@@ -1,7 +1,7 @@
 ---
 title: О сайте
 permalink: /
-layout: post
+layout: page
 ---
 
 Сайт поддержки проектов

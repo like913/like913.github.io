@@ -1,6 +1,7 @@
 ---
 title: Aide
 permalink: /aide/
-layout: default
---- 
+layout: page
+---
+
 Помошник для организации проектов и структур.
