@@ -4,8 +4,7 @@
 .right {
 	width: max-content;
 	margin-left: auto;
-	margin-right: 0px;
-	text-align: right;}
+	margin-right: 0px;}
 
 .flex {
 	width: 100%;
@@ -19,6 +18,12 @@
 	flex: 0 0 20%;
 	max-width: 20%;}	
 
+.date {
+	font-size: 8pt;}
+
+.text-right {
+	text-align: right;}
+	
 body {
 	width: 900px;
 	margin-top: 0px;
