@@ -1,10 +1,29 @@
+*, ::after, ::before {
+	box-sizing: border-box;}
+
+.right {
+	width: max-content;
+	margin-left: auto;
+	margin-right: 0px;}
+
+.content {
+	flex: 0 0 80%;
+	max-width: 80%;}
+
+.menu {
+	flex: 0 0 20%;
+	max-width: 20%;
+	background-color: #101030;}	
+
 body {
 	width: 900px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	color: #e0e0ff;}
+	position: relative;
+	background-color: #080010;}
+
 p, div {
 	margin-top: 4.0px;
 	margin-right: 0px;
@@ -67,23 +86,20 @@ h4 {
 
 a {
 	color: #a0a0ff;
-	text-decoration: none;
+	text-decoration: none;}
 
-a: link, body_alink
-{
+a: link, body_alink {
 	color: #a0a0ff;
-	text-decoration: none;
-}
-a: visited, body_avisited
-{
+	text-decoration: none;}
+
+a: visited, body_avisited {
 	color: #a0a0a0;
-	text-decoration: none;
-}
-a: hover, a: active, body_ahover
-{
+	text-decoration: none;}
+
+a: hover, a: active, body_ahover {
 	color: #0000ff;
-	text-decoration: underline;
-}
+	text-decoration: underline;}
+
 li {
 	margin-top: 2.0px;
 	margin-bottom: 2.0px;
@@ -91,8 +107,10 @@ li {
 	text-align: justify;
 	font-size: 10.0pt;
 	letter-spacing: .25pt;}
+
 BLOCKQUOTE {
 	font-size: 10.0pt;}
+
 pre {
 	margin-top: 0px;
 	margin-right: 0px;
@@ -103,9 +121,3 @@ pre {
 	font-size: 10.0pt;
 	font-family: "Courier New","Serif";
 	letter-spacing: .25pt;}
-div.right {
-	width: auto;
-	margin-left: auto;
-	margin-right: 0px;
-	text-align: right;
-}
