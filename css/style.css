@@ -7,7 +7,7 @@ body {
 	line-height:100%;
 	font-size:10.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#202040;
+	color:#e0e0ff;
 	letter-spacing:.25pt;}
 p {
 	margin-top:4.0pt;
@@ -18,91 +18,7 @@ p {
 	line-height:100%;
 	font-size:10.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.date {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:100%;
-	font-size:12.0pt;
-	font-family:"Calibri","Arial";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.path {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0.0pt;
-	margin-left:0cm;
-	text-align:left;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.right {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:right;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.center {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0.0cm;
-	margin-left:0cm;
-	text-align:center;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.space {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:32pt;
-	text-align:justify;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.rem {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:2.0pt;
-	margin-left:32.0pt;
-	text-align:justify;
-	line-height:100%;
-	font-size:8.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
-	letter-spacing:.25pt;}
-
-p.left {
-	margin-top:4.0pt;
-	margin-right:0cm;
-	margin-bottom:4.0pt;
-	margin-left:0cm;
-	text-align:left;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#202040;
+	color:#e0e0ff;
 	letter-spacing:.25pt;}
 
 h1 {
@@ -114,7 +30,7 @@ h1 {
 	line-height:100%;
 	font-size:24.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#000080;
+	color:#a0a0ff;
 	letter-spacing:.25pt;}
 
 h1.title {
@@ -126,7 +42,7 @@ h1.title {
 	line-height:100%;
 	font-size:48.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#000080;
+	color:#a0a0ff;
 	letter-spacing:.25pt;}
 
 h2 {
@@ -138,7 +54,7 @@ h2 {
 	line-height:100%;
 	font-size:18.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#000080;
+	color:#a0a0ff;
 	letter-spacing:.25pt;}
 
 h3 {
@@ -150,7 +66,7 @@ h3 {
 	line-height:100%;
 	font-size:14.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#000080;
+	color:#a0a0ff;
 	letter-spacing:.25pt;}
 
 h4 {
@@ -162,21 +78,21 @@ h4 {
 	line-height:100%;
 	font-size:10.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#000080;
+	color:#a0a0ff;
 	letter-spacing:.25pt;}
 
 a {
-	color:#000080;
+	color:#a0a0ff;
 	text-decoration: none;
 
 a:link, body_alink
 {
-	color: #000080;
+	color: #a0a0ff;
 	text-decoration: none;
 }
 a:visited, body_avisited
 {
-	color: #000080;
+	color: #a0a0ff;
 	text-decoration: none;
 }
 a:hover, a:active, body_ahover
@@ -187,13 +103,11 @@ a:hover, a:active, body_ahover
 b {
 	line-height:100%;
  font-family:"Cambria","Times New Roman";
-	color:#202040;
 	letter-spacing:.25pt;}
 
 i {
 	line-height:100%;
 	font-family:"Cambria","Times New Roman";
-	color:#000040;
 	letter-spacing:.25pt;}
 
 li {
@@ -203,13 +117,11 @@ li {
 	text-align:justify;
 	font-size:10.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#202040;
 	letter-spacing:.25pt;}
 
 BLOCKQUOTE {
 	font-size:10.0pt;
 	font-family:"Cambria","Times New Roman";
-	color:#202040;
 
 pre {
 	margin-top:0cm;
@@ -220,5 +132,4 @@ pre {
 	line-height:100%;
 	font-size:10.0pt;
 	font-family:"Courier New","Serif";
-	color:#202040;
 	letter-spacing:.25pt;}
