@@ -6,7 +6,8 @@ title: Блог
 <ul>
 
 	 {% for post in site.posts %}
-	 <li><span class="date">{{ post.date|date:"%d.%m.%Y" }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	 <li><span class="remark">{{ post.date|date:"%d.%m.%Y" }}</span> » <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
 	 {% endfor %}
+	 
 	 
 </ul>
