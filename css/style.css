@@ -1,5 +1,5 @@
 body {
-	width: 950px;
+	width: 900px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -8,7 +8,7 @@ body {
 p, div {
 	margin-top: 4.0px;
 	margin-right: 0px;
-	margin-bottom: 4.0px;
+	margin-bottom: 6.0px;
 	margin-left: 0px;
 	text-align: justify;
 	font-size: 10.0pt;
