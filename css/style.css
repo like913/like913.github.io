@@ -1,135 +1,111 @@
 body {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#e0e0ff;
-	letter-spacing:.25pt;}
+	width: 950px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	color: #e0e0ff;}
 p {
-	margin-top:4.0pt;
-	margin-right:0cm;
-	margin-bottom:4.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#e0e0ff;
-	letter-spacing:.25pt;}
+	margin-top: 4.0px;
+	margin-right: 0px;
+	margin-bottom: 4.0px;
+	margin-left: 0px;
+	text-align: justify;
+	font-size: 10.0pt;
+	color: #e0e0ff;
+	letter-spacing: .25pt;}
 
 h1 {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:center;
-	line-height:100%;
-	font-size:24.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#a0a0ff;
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6.0px;
+	margin-left: 0px;
+	text-align: center;
+	font-size: 24.0pt;
+	color: #a0a0ff;
+	letter-spacing: .25pt;}
 
 h1.title {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:center;
-	line-height:100%;
-	font-size:48.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#a0a0ff;
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6.0px;
+	margin-left: 0px;
+	text-align: center;
+	font-size: 48.0pt;
+	color: #a0a0ff;
+	letter-spacing: .25pt;}
 
 h2 {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:center;
-	line-height:100%;
-	font-size:18.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#a0a0ff;
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6.0px;
+	margin-left: 0px;
+	text-align: center;
+	font-size: 18.0pt;
+	color: #a0a0ff;
+	letter-spacing: .25pt;}
 
 h3 {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:32pt;
-	text-align:left;
-	line-height:100%;
-	font-size:14.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#a0a0ff;
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 6.0px;
+	margin-left: 32px;
+	text-align: left;
+	font-size: 14.0pt;
+	color: #a0a0ff;
+	letter-spacing: .25pt;}
 
 h4 {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:4.0pt;
-	margin-left:16pt;
-	text-align:left;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	color:#a0a0ff;
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 4.0px;
+	margin-left: 16px;
+	text-align: left;
+	font-size: 10.0pt;
+	color: #a0a0ff;
+	letter-spacing: .25pt;}
 
 a {
-	color:#a0a0ff;
+	color: #a0a0ff;
 	text-decoration: none;
 
-a:link, body_alink
+a: link, body_alink
 {
 	color: #a0a0ff;
 	text-decoration: none;
 }
-a:visited, body_avisited
+a: visited, body_avisited
 {
-	color: #a0a0ff;
+	color: #a0a0a0;
 	text-decoration: none;
 }
-a:hover, a:active, body_ahover
+a: hover, a: active, body_ahover
 {
- color: #0000ff;
+	color: #0000ff;
 	text-decoration: underline;
 }
-b {
-	line-height:100%;
- font-family:"Cambria","Times New Roman";
-	letter-spacing:.25pt;}
-
-i {
-	line-height:100%;
-	font-family:"Cambria","Times New Roman";
-	letter-spacing:.25pt;}
-
 li {
-	margin-top:2.0pt;
-	margin-bottom:2.0pt;
-	line-height:100%;
-	text-align:justify;
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-	letter-spacing:.25pt;}
-
+	margin-top: 2.0px;
+	margin-bottom: 2.0px;
+	line-height: 100%;
+	text-align: justify;
+	font-size: 10.0pt;
+	letter-spacing: .25pt;}
 BLOCKQUOTE {
-	font-size:10.0pt;
-	font-family:"Cambria","Times New Roman";
-
+	font-size: 10.0pt;}
 pre {
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0.0cm;
-	margin-left:16pt;
-	text-align:left;
-	line-height:100%;
-	font-size:10.0pt;
-	font-family:"Courier New","Serif";
-	letter-spacing:.25pt;}
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0.0px;
+	margin-left: 16px;
+	text-align: left;
+	line-height: 100%;
+	font-size: 10.0pt;
+	font-family: "Courier New","Serif";
+	letter-spacing: .25pt;}
+.right {
+	width: auto;
+	margin-left: auto;
+	margin-right: 0px;
+	text-align: right;
+}
