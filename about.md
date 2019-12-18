@@ -1,7 +1,7 @@
 ---
 title: О сайте
 description: Сайт поддержки проектов автора
-permalink: /about/
+permalink: /about
 layout: page
 ---
 

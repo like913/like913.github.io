@@ -2,6 +2,6 @@
 layout: page
 title: Aide
 description: "Помощник для организации проектов."
-permalink: /Aide/
+permalink: /aide
 ---
 Помощник для организации проектов и структур.
