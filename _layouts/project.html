@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+<div class="remark">{{ page.description }}</div>
+<div class="remark right">{{ page.date | date:"%d.%m.%Y" }}</div>
+<hr class="gray" />
+<div>
+
+	{{ content }}
+
+	<div class="right"><a href="/{{ page.title }}" title="{{ page.title }}">Перейти на страницу проекта</a></div>
+	<div class="right"><a href="https://github.com/like913/{{ page.title }}" title="{{ page.title }}">Перейти в репозиторий проекта</a></div>
+</div>

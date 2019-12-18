@@ -1,19 +1,13 @@
 ---
-layout: post
+layout: project
 title: "Aide"
-blogname: "Добавлен проект Aide"
 description: "Помощник для организации проектов"
-date: 2019-12-14
 categories: 
 - project
-- add
 tags:
-- add
 - project
 - aide
 - cpp
 - qt5
 ---
 Помощник для организации проектов и структур.
-
-<div class="right"><a href="/aide/" title="Aide">Перейти на страницу проекта</a></div>
