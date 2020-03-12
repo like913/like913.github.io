@@ -1,15 +1,15 @@
 ---
-title: Проекты
-description: Все созданные проекты автора сайта
-permalink: /projects/
+title: Блог
+description: Блог автора сайта
+permalink: /blog/
 layout: page
 categories: 
 - projects
 tags:
-- project
+- blog
 ---
 <div class='flex'>
-{% for post in site.categories.project %}
+{% for post in site.categories.blog %}
 
 {% include post-x2.html %}
 

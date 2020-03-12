@@ -1,0 +1,14 @@
+<div class="menu">
+	<ul id="menubar">
+		<li><a href="/">Главная</a></li>
+		<li><a href="/projects">Проекты</a>
+		<ul>
+			{% for post in site.categories.project %}
+				<li><a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+		</li>
+		<li><a href="/blog">Блог</a></li>
+		<li><a href="/about">О нас</a></li>
+	</ul>
+</div>

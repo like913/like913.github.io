@@ -1,0 +1,37 @@
+.left-menu {
+	border-radius: 4px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	width: 150px;}
+
+.left-menu li {
+	border-radius: 4px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 2px;}
+
+.left-menu li a {
+	border-radius: 4px;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	padding: 4px 15px;
+	background: #181c20;
+	text-decoration: none;
+	position: relative;}
+
+.left-menu li a:hover {
+	border-radius: 4px;
+	display: block;
+	background: #202428;}
+
+.left-menu li:hover ul { display: block; }
+
+.left-menu ul {
+	display: none;
+	border-radius: 4px;
+	margin: 0px;
+	padding: 4px 15px;
+	list-style: none;
+	width: 180px;}
