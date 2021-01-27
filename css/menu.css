@@ -21,7 +21,7 @@
 #menubar {
 	border-radius: 4px;
 	height: 30px;
-	background-color: #101418;
+	background-color: #131516;
 	padding-left: 25px;
 }
 #menubar li {
@@ -35,7 +35,7 @@
 	display: block;
 	padding: 6px;
 	width: 100px;
-	color: #fff;
+	color: #e8e6e3;
 	text-decoration: none;
 	text-align: center;
 }

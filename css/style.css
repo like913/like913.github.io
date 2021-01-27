@@ -24,7 +24,7 @@
 	border-radius: 6px;
 	margin: 2px;
 	padding: 4px;
-	background-color: #101418;}
+	background-color: #131516;}
 
 .remark {
 	font-size: 8pt;}
@@ -44,7 +44,8 @@ body {
 	margin-bottom: 0px;
 	margin-left: auto;
 	width: 1000px;
-	background-color: #04080c;}
+	background-color: #131516;
+	scrollbar-color: #454a4d #202324;}
 
 p {
 	margin-top: 4.0px;
@@ -53,42 +54,42 @@ p {
 	margin-left: 0px;
 	text-align: justify;
 	font-size: 10.0pt;
-	color: #d8dce0;
+	color: #e8e6e3;
 	letter-spacing: .25pt;}
 	
 div {
 	margin: 0px;
 	text-align: justify;
 	font-size: 10.0pt;
-	color: #d8dce0;
+	color: #e8e6e3;
 	letter-spacing: .25pt;}
 
 h1 {
 	margin: 0px;
 	text-align: center;
 	font-size: 24.0pt;
-	color: #cde;
+	color: #d8d4cf;
 	letter-spacing: .25pt;}
 
 h1.title {
 	margin: 0px;
 	text-align: center;
 	font-size: 36.0pt;
-	color: #cde;
+	color: #d8d4cf;
 	letter-spacing: .25pt;}
 
 h2 {
 	margin: 0px;
 	text-align: center;
 	font-size: 18.0pt;
-	color: #cde;
+	color: #d8d4cf;
 	letter-spacing: .25pt;}
 
 h3 {
 	margin: 0px;
 	text-align: left;
 	font-size: 14.0pt;
-	color: #cde;
+	color: #d8d4cf;
 	letter-spacing: .25pt;}
 
 h4 {
@@ -96,18 +97,18 @@ h4 {
 	text-align: left;
 	font-size: 10.0pt;
 	text-align: center;
-	color: #cde;
+	color: #d8d4cf;
 	letter-spacing: .25pt;}
 
 hr {
-	border: 1px solid #04080c;}
+	border: 1px solid #131516;}
 
 a {
-	color: #2880c0;
+	color: #62aade;
 	text-decoration: none;}
 
 a: link, body_alink {
-	color: #2880c0;
+	color: #62aade;
 	text-decoration: none;}
 
 a: visited, body_avisited {
@@ -132,7 +133,7 @@ BLOCKQUOTE {
 code {
 	padding: 2px 4px;
 	border-radius: 4px;
-	background-color: #202428;}
+	background-color: #202324;}
 
 pre {
 	margin: 0px;
