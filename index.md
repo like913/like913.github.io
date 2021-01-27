@@ -4,4 +4,4 @@ permalink: /
 layout: page
 ---
 
-Сайт поддержки проектов [like](https://vk.com/like_913 "like").
+Блог и сайт поддержки проектов [like](https://vk.com/like_913 "like").

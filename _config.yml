@@ -2,7 +2,7 @@ name: like913.github.io
 description: Мои проекты
 author: like
 copyright: like
-keywords: проекты, github
+keywords: блог, проекты, github
 url: https://like913.github.io/
 permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
